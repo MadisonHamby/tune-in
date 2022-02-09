@@ -137,10 +137,10 @@ def init_plot():
 # Main
 if __name__ == "__main__":
     # Tread for plot render - Note this generates a warning, but works fine
-   # thread = threading.Thread(target=init_plot)
-    #thread.daemon = True
-    #thread.start()
-    #init_plot()
+    thread = threading.Thread(target=init_plot)
+    thread.daemon = True
+    thread.start()
+    init_plot()
 
     # Init Muse Listeners
     dispatcher = dispatcher.Dispatcher()
