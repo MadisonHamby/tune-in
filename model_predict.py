@@ -17,6 +17,16 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import style
 import csv
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+
+cid = '1d1cc75605b944eda2304c4567fdafcb'
+
+secret = 'f79a206d1feb4698880981ff89004f3f'
+
+client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret)
+
+sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
 
 from muselsl import stream, list_muses
 
