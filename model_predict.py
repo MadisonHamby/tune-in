@@ -28,6 +28,9 @@ client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secr
 
 sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
 
+sp.user_playlist_create('314zfitamagoogjefsnhvljfcgtq', "Focused Playlist", public=True, collaborative=False, description='Collection of focused tracks')
+
+
 from muselsl import stream, list_muses
 
 root = "data/"
